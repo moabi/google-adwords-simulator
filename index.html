@@ -2,8 +2,23 @@
 <html ng-app>
 <head>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular.min.js"></script>
+    <style>
+        #tads h3, #tadsb h3, #mbEnd h3 {
+            font-size: 18px !important;
+        }
+        #center_col ._Ak a:visited, #center_col ._Ak a._kBb, #rhs ._Ak a:visited, #rhs ._Ak a._kBb {
+            color: #609;
+        }
+    </style>
 </head>
 <body>
+<div>
+    <h2>Exemple de publicité Adwords :</h2>
+    Publicité sur Google?
+    www.google.fr/AdWords?
+    Attirez des clients avec AdWords
+    Diffusez votre annonce maintenant!
+</div>
 <div>
     <label>Name:</label>
     <input maxlength="25" type="text" ng-model="title" placeholder="Titre de votre annonce">
@@ -11,9 +26,15 @@
     <input maxlength="10" type="text" ng-model="link" placeholder="lien/URL de votre annonce">
     <input maxlength="35" type="text" ng-model="text" placeholder="Texte de votre annonce">
     <hr>
-    <h1>{{title}}</h1>
+    <div class="ads-ad">
+    <h3><a href="{{link}}">{{title}}</a></h3>
+    <div class="ads-visurl">
     <a href="{{link}}">{{prettyLink}}</a>
-    <p>{{text}}</p>
+    </div>
+    <div class="ads-creative">
+        {{text}}
+    </div>
+    </div>
 </div>
 </body>
 </html>
