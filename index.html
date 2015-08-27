@@ -7,6 +7,22 @@
     <meta name="viewport" content="width=1020">
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular.min.js"></script>
     <style>
+        body{color: rgb(84, 84, 84);
+            display: block;
+            font-family: arial, sans-serif;
+            font-size: 13px;line-height: 18px;
+            list-style-image: none;
+            list-style-position: outside;
+            list-style-type: none;
+            text-align: left;
+            width: 100%;
+            zoom: 1;}
+        #wrapper{
+            width: 500px;
+            margin: 20px auto;
+            display: block;
+            float: none;
+            clear: both;width: 350px;}
         #tads h3, #tadsb h3, #mbEnd h3,h3 {
             font-size: 18px !important;
             font-weight: normal;
@@ -24,9 +40,18 @@
             line-height: 18px;
             max-width: 295px;
         }
+        input{margin: 5px; width: 90%;
+            padding: 4px;}
+        label{
+            font-weight: bold;}
+        h1{
+            line-height: 1.4;
+            font-style: normal;
+        font-size: 20px}
     </style>
 </head>
 <body>
+<div id="wrapper">
 <div>
     <h1>Exemple de publicité Adwords :</h1>
     <div class="ads-ad">
@@ -46,22 +71,30 @@
 
 
 <div>
-    <label>Remplissez votre annonce comme suite:</label>
-    <em>Attention, désactivez AdBlock afin de voir cette page...</em>
+    <label>Remplissez votre annonce comme suit:</label><br>
+    <em>Attention, désactivez AdBlock afin de voir cette page...</em><br>
     <input maxlength="25" type="text" ng-model="title" placeholder="Titre de votre annonce"> <br>
-    <input maxlength="35" type="text" ng-model="prettyLink" placeholder="lien/URL de votre annonce"><br>
+    <input maxlength="35" type="text" ng-model="prettyLink" placeholder="lien avec mots clefs"><br>
     <input maxlength="10" type="text" ng-model="link" placeholder="lien/URL de votre annonce"><br>
     <input maxlength="35" type="text" ng-model="text" placeholder="Texte de votre annonce"><br>
+    <input maxlength="35" type="text" ng-model="text2" placeholder="2ieme ligne de votre annonce"><br>
+
     <hr>
+    <h2>Résultat :</h2>
     <div class="ads-ad">
     <h3><a href="{{link}}">{{title}}</a></h3>
     <div class="ads-visurl">
         <cite><a href="{{link}}">{{prettyLink}}</a></cite>
     </div>
     <div class="ads-creative">
-        {{text}}
+        {{text}} <br>
+        {{text2}}
     </div>
     </div>
 </div>
+
+</div>
+
+
 </body>
 </html>
