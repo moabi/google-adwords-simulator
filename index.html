@@ -7,11 +7,22 @@
     <meta name="viewport" content="width=1020">
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular.min.js"></script>
     <style>
-        #tads h3, #tadsb h3, #mbEnd h3 {
+        #tads h3, #tadsb h3, #mbEnd h3,h3 {
             font-size: 18px !important;
+            font-weight: normal;
+            margin: 0;
+            padding: 0;
         }
         #center_col ._Ak a:visited, #center_col ._Ak a._kBb, #rhs ._Ak a:visited, #rhs ._Ak a._kBb {
             color: #609;
+        }
+        .a, cite, cite a:link, cite a:visited, .cite, .cite:link, #_bGc>i, .bc a:link {
+            color: #006621;
+            font-style: normal;
+        }
+        .ads-ad {
+            line-height: 18px;
+            max-width: 295px;
         }
     </style>
 </head>
@@ -23,7 +34,7 @@
             <a href="#">Publicité sur Google</a>
         ‎</h3>
         <div class="ads-visurl">
-            www.google.fr/AdWords‎
+            <cite> www.google.fr/AdWords‎ </cite>
         </div>
         <div class="ads-creative">
             Attirez des clients avec AdWords
@@ -44,7 +55,7 @@
     <div class="ads-ad">
     <h3><a href="{{link}}">{{title}}</a></h3>
     <div class="ads-visurl">
-    <a href="{{link}}">{{prettyLink}}</a>
+        <cite><a href="{{link}}">{{prettyLink}}</a></cite>
     </div>
     <div class="ads-creative">
         {{text}}
