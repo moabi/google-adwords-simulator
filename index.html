@@ -18,17 +18,25 @@
 <body>
 <div>
     <h1>Exemple de publicité Adwords :</h1>
-    <h3>Publicité sur Google‎</h3>
-    www.google.fr/AdWords‎
-    Attirez des clients avec AdWords
-    Diffusez votre annonce maintenant!
+    <div class="ads-ad">
+        <h3>
+            <a href="#">Publicité sur Google</a>
+        ‎</h3>
+        <div class="ads-visurl">
+            www.google.fr/AdWords‎
+        </div>
+        <div class="ads-creative">
+            Attirez des clients avec AdWords
+            Diffusez votre annonce maintenant!
+        </div>
+    </div>
 </div>
 <div>
     <label>Name:</label>
-    <input maxlength="25" type="text" ng-model="title" placeholder="Titre de votre annonce">
-    <input maxlength="35" type="text" ng-model="prettyLink" placeholder="lien/URL de votre annonce">
-    <input maxlength="10" type="text" ng-model="link" placeholder="lien/URL de votre annonce">
-    <input maxlength="35" type="text" ng-model="text" placeholder="Texte de votre annonce">
+    <input maxlength="25" type="text" ng-model="title" placeholder="Titre de votre annonce"> <br>
+    <input maxlength="35" type="text" ng-model="prettyLink" placeholder="lien/URL de votre annonce"><br>
+    <input maxlength="10" type="text" ng-model="link" placeholder="lien/URL de votre annonce"><br>
+    <input maxlength="35" type="text" ng-model="text" placeholder="Texte de votre annonce"><br>
     <hr>
     <div class="ads-ad">
     <h3><a href="{{link}}">{{title}}</a></h3>
