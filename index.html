@@ -1,52 +1,32 @@
-<!doctype html>
-<html ng-app>
+<!DOCTYPE html>
+
+<html ng-app="">
 <head>
-<<<<<<< HEAD
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="A layout example that shows off a responsive product landing page.">
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular.min.js" type="text/javascript">
+</script>
+
     <title>Landing Page &ndash; Layout Examples &ndash; Pure</title>
-
-
-
-
-    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
-
-
-
-    <!--[if lte IE 8]>
+    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css" type="text/css"><!--[if lte IE 8]>
 
     <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/grids-responsive-old-ie-min.css">
 
     <![endif]-->
     <!--[if gt IE 8]><!-->
-
-    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/grids-responsive-min.css">
-
-    <!--<![endif]-->
-
-
-
-    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
-
-
-
-
-    <!--[if lte IE 8]>
+    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/grids-responsive-min.css" type="text/css"><!--<![endif]-->
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" type="text/css"><!--[if lte IE 8]>
     <link rel="stylesheet" href="css/layouts/marketing-old-ie.css">
     <![endif]-->
     <!--[if gt IE 8]><!-->
-    <link rel="stylesheet" href="css/layouts/marketing.css">
-    <!--<![endif]-->
+    <link rel="stylesheet" href="css/layouts/marketing.css" type="text/css"><!--<![endif]-->
 
-
-
-    <style>
-        /* http://meyerweb.com/eric/tools/css/reset/
-   v2.0 | 20110126
-   License: none (public domain)
-*/
+    <style type="text/css">
+    /* http://meyerweb.com/eric/tools/css/reset/
+    v2.0 | 20110126
+    License: none (public domain)
+    */
 
         html, body, div, span, applet, object, iframe,
         h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -112,7 +92,6 @@
             display: block;
             float: none;
             clear: both;
-            width: 350px;
             padding: 0;
             overflow: hidden;
         }
@@ -133,7 +112,7 @@
             line-height: 18px;
             max-width: 295px;
         }
-        input{margin: 5px; width: 90%;
+        input{margin: 5px; width: 70%;
             padding: 4px;}
         label{
             font-weight: bold;}
@@ -143,31 +122,18 @@
             margin: 10px 0 8px;
             font-size: 20px}
     </style>
-
-
-
 </head>
+
 <body>
-
-
-
-
-
-
-
-
-
-<div class="header">
-    <div class="home-menu pure-menu pure-menu-horizontal pure-menu-fixed">
-        <a class="pure-menu-heading" href="">Google Adwords ad simulator</a>
-<!--
+    <div class="header">
+        <div class="home-menu pure-menu pure-menu-horizontal pure-menu-fixed">
+            <a class="pure-menu-heading" href="">Google Adwords ad simulator</a> <!--
         <ul class="pure-menu-list">
             <li class="pure-menu-item pure-menu-selected"><a href="#" class="pure-menu-link">Home</a></li>
   
         </ul>-->
-    </div>
-</div>
-<!--
+        </div>
+    </div><!--
 <div class="splash-container">
     <div class="splash">
         <h1 class="splash-head">Big Bold Text</h1>
@@ -180,38 +146,39 @@
     </div>
 </div>
 -->
-<div class="content" style="padding: 50px 0 0;">
- 
+
+    <div class="content" style="padding: 50px 0 0;">
         <div id="wrapper">
-
-
-
             <div>
                 <h1>Remplissez votre annonce comme suit:</h1><br>
                 <em>Attention, désactivez AdBlock afin de voir cette page...</em><br>
-                <input maxlength="25" type="text" ng-model="title" placeholder="Titre de votre annonce"> <br>
-                <input maxlength="35" type="text" ng-model="prettyLink" placeholder="lien avec mots clefs"><br>
-                <input maxlength="255" type="text" ng-model="link" placeholder="lien/URL de votre annonce"><br>
-                <input maxlength="48" type="text" ng-model="text" placeholder="Texte de votre annonce"><br>
-                <input maxlength="48" type="text" ng-model="text2" placeholder="2ieme ligne de votre annonce"><br>
+                <input ng-trim="false" maxlength="25" type="text" ng-model="title" placeholder="Titre de votre annonce"> <span>{{25 - title.length}} char</span><br>
+                <input maxlength="35" type="text" ng-model="prettyLink" placeholder="lien avec mots clefs"><span>{{35 - link.length}} char</span><br>
+                <input maxlength="255" type="text" ng-model="link" placeholder="lien/URL de votre annonce"><span>{{255 - link.length}} char</span><br>
+                <input maxlength="48" type="text" ng-model="text" placeholder="Texte de votre annonce"><span>{{48 - text.length}} char</span><br>
+                <input maxlength="48" type="text" ng-model="text2" placeholder="2ieme ligne de votre annonce"><span>{{48 - text2.length}} char</span><br>
+                <hr>
+                <hr>
 
-                <hr> <hr>
-                <h2>Résultat : </h2>
+                <h2>Résultat :</h2>
+
                 <div class="ads-ad">
                     <h3><a href="{{link}}">{{title}}</a></h3>
+
                     <div class="ads-visurl">
                         <cite><a href="{{link}}">{{prettyLink}}</a></cite>
                     </div>
+
                     <div class="ads-creative">
-                        {{text}} <br>
+                        {{text}}<br>
                         {{text2}}
                     </div>
                 </div>
             </div>
-            <hr> <hr>
+            <hr>
+            <hr>
 
             <h2>AIDE</h2>
-
 
             <h2>Titre</h2>
 
@@ -227,60 +194,25 @@
 
             <div>
                 <h1>Exemple de publicité Adwords :</h1>
+
                 <div class="ads-ad">
-                    <h3>
-                        <a href="#">Publicité sur Google</a>
-                        ‎</h3>
+                    <h3><a href="#">Publicité sur Google</a> ‎</h3>
+
                     <div class="ads-visurl">
-                        <cite> www.google.fr/AdWords‎ </cite>
+                        <cite>www.google.fr/AdWords‎</cite>
                     </div>
+
                     <div class="ads-creative">
-                        Attirez des clients avec AdWords
-                        Diffusez votre annonce maintenant!
+                        Attirez des clients avec AdWords Diffusez votre annonce maintenant!
                     </div>
                 </div>
             </div>
             <hr>
-
         </div>
 
-     
-   
-
-
-
-    <div class="footer l-box is-center">
-        View the source of this layout to learn more. Made with love by the YUI Team.
+        <div class="footer l-box is-center">
+            View the source of this layout to learn more. Made with love by the YUI Team.
+        </div>
     </div>
-
-</div>
-
-
-
-
-
-
 </body>
 </html>
-
-
-
-
-=======
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular.min.js"></script>
-</head>
-<body>
-<div>
-    <label>Name:</label>
-    <input maxlength="25" type="text" ng-model="title" placeholder="Titre de votre annonce">
-    <input maxlength="35" type="text" ng-model="prettyLink" placeholder="lien/URL de votre annonce">
-    <input maxlength="10" type="text" ng-model="link" placeholder="lien/URL de votre annonce">
-    <input maxlength="35" type="text" ng-model="text" placeholder="Texte de votre annonce">
-    <hr>
-    <h1>{{title}}</h1>
-    <a href="{{link}}">{{prettyLink}}</a>
-    <p>{{text}}</p>
-</div>
-</body>
-</html>
->>>>>>> 49e2327bc251d9030457a1337205556a27602671
